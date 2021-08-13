@@ -1,0 +1,52 @@
+body{
+    background-color: lawngreen;
+   
+}
+
+h1{
+    color: red;
+    font-size: 20px;
+    text-align: center;
+}
+
+td{
+    background-color: sandybrown;
+}
+
+#unico{
+    background-color: steelblue;
+}
+
+#h1Alt{
+    color: blue;
+    font-size: 35px;
+    text-align: left;
+}
+
+h1.personalizacao{
+    color: yellow;
+    font-size: 30px;
+    text-align: right;
+      
+}
+h1.personalizacao2{
+    line-height: 25%;
+    
+}
+
+*{
+    font-family: Verdana;
+    font-size: 15px;
+
+}
+.table{
+    margin-right: auto;
+    margin-left: auto;
+}
+td.linha{
+    font-size: 15px;
+    font-style: italic;
+    color: navy;
+    
+    
+}
