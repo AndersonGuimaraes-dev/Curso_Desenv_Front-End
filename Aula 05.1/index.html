@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="estilo.css" rel="stylesheet">
+    <title>Formulário em Tabela</title>
+</head>
+
+<body>
+    <h1>Tabela Formulário</h1>
+    <table border="1" width="40%">
+
+        <form name="formulario" method="POST" action="recebe.php">
+            <tr>
+                <td><label for="nome">Nome:</label></td>
+                <td><input type="text" name="nome" placeholder="Nome"></td>
+            </tr>
+            <tr>
+                <td><label for="endereco">Endereço</label></td>
+                <td><input type="text" name="endereco" required></td>
+
+            </tr>
+            <tr>
+                <td><label for="telefone">Telefone:</label></td>
+                <td><input type="text" name="telefone" required placeholder="Telefone" maxlength="12"><br></td>
+            </tr>
+            <tr>
+                <td colspan="2"><label>Disponibilidade de horário</label></td>
+            </tr>
+            <tr>
+                <td> <input type="checkbox" name="integral" value="integral">
+                </td>
+                <td><label>Integral</label></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="matutino" value="matutino">
+                </td>
+                <td>matutino</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="noturno" value="noturno"></td>
+                <td>noturno</td>
+            </tr>
+
+            <tr>
+                <td colspan="2"><label>Sexo</label></td>
+            </tr>
+            <tr>
+                <td> <input type="radio" name="sexo" value="01"></td>
+                <td>Masculino</td>
+            </tr>
+            <tr>
+                <td> <input type="radio" name="sexo" value="02"></td>
+                <td>Feminino</td>
+            </tr>
+
+            <tr>
+                <td colspan="4"> <label>Estado Civil</label></td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="estadoCivil" value="solteiro"></td>
+                <td>Solteiro</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="estadoCivil" value="casado"></td>
+                <td>Casado</td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Enviar"></td>
+                <td><input type="reset" value="Limpar"></td>
+            </tr>
+
+        </form>
+    </table>
+    <p>
+        Exemplo de formulário usado tags do html e personalização usando código css.
+    </p>
+    <h1 id="h1Alt">Exemplo</h1>
+    <p>
+        Exemplo de formulário usado tags do html e personalização usando código css.
+    </p>
+    <h1>Título</h1>
+    <p>
+        Exemplo de formulário usado tags do html e personalização usando código css.
+    </p>
+    <h1 class="personalizacao">Título 1</h1>
+    <p>
+        Exemplo de formulário usado tags do html e personalização usando código css.
+    </p>
+    <h1 class="personalizacao">Título 2</h1>
+    <p>
+        Exemplo de formulário usado tags do html e personalização usando código css.
+    </p>
+    <h1>Título 3</h1>
+    <p>
+        Exemplo de formulário usado tags do html e personalização usando código css.
+    </p>
+</body>
+
+</html>
