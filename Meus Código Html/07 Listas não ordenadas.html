@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas não ordenadas</title>
+</head>
+<body>
+    <h1>Tag de lista não ordenada: &ltul&gt</h1>
+    Listas não ordenadas são lista que não precisam de uma numeração sequencial, seja por numeral arábico, romano ou por sequência de letras (a, b, c etc.).<br>
+    "ul" significa unordered list.<br>
+    "li"significa list item.
+    <h2>Atributos de &ltul&gt</h2>
+    "type" - tipo de marcador de lista:<br>
+    "circle" = círculo vazado;<br>
+    "disc" = disco cheio;<br>
+    "square" = quadrado;<br>
+    "triangle" = triângulo (interface WebTV; nem todo navegador o suporta).<br>
+    <h2>Esses marcadores estão deprecados. Devemos configurar o tpo de marcador usando a propriedade CSS "list-style-type".</h2>
+    <ul type="circle">
+        <li>Pizza</li>
+        <li>Esfiha</li>
+        <li>Coxinha</li>
+        <li>Croissant</li>
+        <li>Beirute</li>
+    </ul>
+    <ul>
+        <li>África</li>
+        <li>Américas
+            <ul type="square">
+            <li>América do Sul</li>
+            <li>América Central</li>
+            <li>América do Norte</li>
+            </ul>
+        </li>
+        <li>Europa</li>
+        <li>Oceania</li>
+    </ul>
+</body>
+</html>
