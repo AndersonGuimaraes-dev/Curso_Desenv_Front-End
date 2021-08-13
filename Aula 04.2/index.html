@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+
+<body>
+    <form name="formulario" method="POST" action="receb.php">
+
+        <input type="text" name="nome" placeholder="Nome Completo">
+        <p>
+            <label for="endereco">Endereco</label>
+            <input type="text" name="endereco"><br>
+            <input type="text" name="telefone" required placeholder="Telefone" maxlength="12"><br>
+        </p>
+
+        <p>
+            <label>Disponibilidade de horário</label><br>
+            <input type="checkbox" name="integral" value="integral"> Integral<br>
+            <input type="checkbox" name="matutino" value="matutino"> Matutino<br>
+            <input type="checkbox" name="noturno" value="noturno"> Noturno<br>
+
+        <p>
+            <label>Sexo</label><br>
+            <input type="radio" name="sexo" value="masculino"> Masculino<br>
+            <input type="radio" name="sexo" value="feminino"> Feminino<br>
+        </p>
+
+        <p>
+            <label>Estado Civil</label><br>
+            <input type="radio" name="estadoCivil" value="solteiro">Solteiro<br>
+            <input type="radio" name="estadoCivil" value="casado">Casado<br>
+        </p>
+        <input type="submit" value="Enviar"><br><br>
+        <input type="reset" value="Limpar"><br><br>
+    </form>
+    <table width="60%">
+        <form name="formulario" method="POST" action="recebe.php">
+            <tr>
+                <td><label for="nome">Nome:</label></td>
+                <td><input type="text" name="nome" placeholder="Nome"></td>
+            </tr>
+            <tr>
+                <td><label for="endereco">Endereço</label></td>
+                <td><input type="text" name="endereco" required></td>
+
+            </tr>
+            <tr>
+                <td><label for="telefone">Telefone:</label></td>
+                <td><input type="text" name="telefone" required placeholder="Telefone" maxlength="12"><br></td>
+            </tr>
+            <tr>
+                <td colspan="2"><label>Disponibilidade de horário</label></td>
+            </tr>
+            <tr>
+                <td> <input type="checkbox" name="integral" value="integral">
+                </td>
+                <td><label>Integral</label></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="matutino" value="matutino">
+                </td>
+                <td>matutino</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="noturno" value="noturno"></td>
+                <td>noturno</td>
+            </tr>
+
+            <tr>
+                <td colspan="2"><label>Sexo</label></td>
+            </tr>
+            <tr>
+                <td> <input type="radio" name="sexo" value="01"></td>
+                <td>Masculino</td>
+            </tr>
+            <tr>
+                <td> <input type="radio" name="sexo" value="02"></td>
+                <td>Feminino</td>
+            </tr>
+
+            <tr>
+                <td colspan="4"> <label>Estado Civil</label></td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="estadoCivil" value="solteiro"></td>
+                <td>Solteiro</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="estadoCivil" value="casado"></td>
+                <td>Casado</td>
+            </tr>
+            <tr>
+                <td><input type="password" name="Senha"></td>
+            </tr>
+            <tr>
+                <td><select name="estado">
+                    <option value="">Selecione</option>
+                    <option value="Rio de Janeiro">Rio de Janeiro</option>
+                    <option value="São Paulo">São Paulo</option>
+                    <option value="Distrito Federal">Distrito Federal</option>
+                    <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+                </select>
+            </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Enviar"></td>
+                <td><input type="reset" value="Limpar"></td>
+            </tr>
+
+        </form>
+    </table>
+
+
+</body>
+
+</html>
