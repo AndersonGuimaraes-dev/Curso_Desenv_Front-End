@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas thead tbody e tfoot</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            border: 3px solid rgb(100, 130, 40);
+            width: 30%;
+        }
+        tbody{
+            font-size: 90%;
+            font-style: italic;
+            letter-spacing: 1px;
+        }
+        tfoot{
+            font-weight: bold;
+            font-size: 75%;
+        }
+        thead{
+            color: darkblue;
+        }
+        td{
+            text-align: center;
+            border: 1px solid rgb(100, 130,40);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Tags</h1>
+    <p>
+        &ltthead&gt é usada para agrupar conteúdo de um cabeçalho de tabela. Deve vir após as tags &ltcaption&gt e
+        &ltcolgroup&gt, antes de elementos &lttbody&gt, &lttfoot&gt e &lttr&gt.<br>
+        &ltbody&gt é usada para agrupar o conteúdo do corpo. Deve vir após tags &ltcaption&gt, &ltcolgroup&gt e
+        &ltthead&gt.<br>
+        &ltfoot&gt é usada para agrupar conteúdo do rodapé. Deve vir após tags &ltcaption&gt, &ltcolgroup&gt e
+        &ltthead&gt.
+    </p>
+    <table>
+        <caption>Agenda de endereço</caption>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>Cidades</th>
+                <th colspan="2">Endereço</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="5">Anderson de Matos Guimarães</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>Fábio</td>
+                <td>dos Reis</td>
+                <td>São Paulo</td>
+                <td>Rua das Figueiras, 254</td>
+                <td>Jardim Primavera</td>
+            </tr>
+            <tr>
+                <td>Ana</td>
+                <td>Paula</td>
+                <td>Recife</td>
+                <td>Rua das Ciclames, 44</td>
+                <td>Jardim Outono</td>
+            </tr>
+            <tr>
+                <td>Renata</td>
+                <td>Pacheco</td>
+                <td>Santos</td>
+                <td>Rua das Heras, 123</td>
+                <td>Jardim Verão</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
