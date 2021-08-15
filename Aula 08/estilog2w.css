@@ -1,20 +1,21 @@
 *{
     font-size: 12px;
     margin: auto;
-    padding: 0%;
+    padding: 10px;
 }
 body{
     font-family: Verdana;
     font-size: 12px;
 }
 .menu{
-    list-style: none;
+    list-style-type: none;
     float: left;
 }
 .menu li{
     position: relative;
     float: left;
+    background-color: lawngreen;
 }
 .menu li a{
-    
+
 }
