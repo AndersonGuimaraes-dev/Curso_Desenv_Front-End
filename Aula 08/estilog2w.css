@@ -1,0 +1,14 @@
+*{
+    font-size: 12px;
+    margin: auto;
+    padding: 0%;
+}
+body{
+    font-family: Verdana;
+    font-size: 12px;
+}
+.menu{
+    list-style: none;
+    float: initial;
+
+}
