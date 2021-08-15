@@ -9,6 +9,12 @@ body{
 }
 .menu{
     list-style: none;
-    float: initial;
-
+    float: left;
+}
+.menu li{
+    position: relative;
+    float: left;
+}
+.menu li a{
+    
 }
