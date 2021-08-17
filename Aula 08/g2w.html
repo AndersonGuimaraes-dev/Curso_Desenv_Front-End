@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agro G2W</title>
-    <style>
+    <link rel="stylesheet" href="style.css">
+    <style>/*Estilos CSS internos - para aplicar na tabela*/
         table {
             border-collapse: collapse;
             border: 3px solid rgb(100, 130, 40);
@@ -19,7 +20,7 @@
             letter-spacing: 1px;
         }
 
-        tfoot {
+        tfoot {            
             font-weight: bold;
             font-size: 75%;
         }
@@ -37,9 +38,9 @@
 </head>
 
 <body>
-    <header>
-        <h1>Agro G2W O Futuro é Verde</h1>
-        <nav>
+    <header><!--Cabeçalho do conteúdo do site-->
+        <h1 id="titulo-principal">Agro G2W O Futuro é Verde</h1><!--Criando CSS-->
+        <nav><!--Área para o menu-->
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Quem somos</a></li>
@@ -59,8 +60,8 @@
     <main>
         <section>
             <article>
-                <h2>Agronegócio</h2>
-                <h3>O futuro do Brasil</h3>
+                <h2 class="titulo-secundario">Agronegócio</h2>
+                <h3 class="titulo-terciario"><mark><em>O futuro do Brasil</em></mark></h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, inventore temporibus cupiditate
                     quos quisquam earum provident saepe eos! Quam pariatur iusto mollitia facilis a, expedita eligendi
                     fugit dolorum natus alias? <br>
@@ -73,7 +74,7 @@
                 </p>
             </article>
             <article>
-                <h2>Somos uma grande família</h2>
+                <h2 class="titulo-secundario">Somos uma grande família</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quod minus fugiat expedita alias
                     inventore magnam doloremque! Sint, aut, quaerat facere obcaecati non mollitia quo dolorem itaque
                     veniam, ad eligendi? <br>
@@ -94,9 +95,9 @@
             </aside>
         </section>
         <section>
-            <h2>Resultado do sorteio</h2>
-            <table>
-                <caption>Sorteio do Dia dos Pais 2021</caption>
+            <h2 class="titulo-secundario">Resultado do sorteio</h2>
+            <table><!--Trabalhando com tabela-->
+                <caption id="titulo-tabela"><strong> Sorteio do Dia dos Pais 2021</strong></caption><!--Usando tag semântica para criar título da tabela e no estilo negrito-->
                 <thead>
                     <tr>
                         <th>Ordem</th>
@@ -148,7 +149,7 @@
             </table>
         </section>
         <Section>
-            <h2>Entre em contato</h2><!--Formulário de Contato-->
+            <h2 class="titulo-secundario">Entre em contato</h2><!--Formulário de Contato-->
             Nome: <br>
             Telefone: <br>
             E-mail <br>           
