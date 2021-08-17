@@ -1,0 +1,22 @@
+/*CSS externo*/
+/*Formatações do site Agro G2W*/
+body{
+    background-color: lightgoldenrodyellow;
+}
+#titulo-principal{
+    color: darkgreen;
+    text-align: center; 
+    font-size: 50px;   
+}
+.titulo-secundario{
+    color: green;
+    background-color: lightgreen;    
+}
+.titulo-terciario{
+    color: mediumseagreen;
+}
+#titulo-tabela{
+    color: black;
+    font-size: 30px;
+
+}
