@@ -12,61 +12,96 @@
 <body>
     <div class="container">
         <div class="col-12">
-            <h2>Formulário de contato</h2>
+            <h2>Formulário de contato <i class="bi bi-volume-up"></i></h2>
         </div>
     </div>
 
-        <form>
-    <div class="container">
-        <div class="row">
-            <div class="col-6">
-                <label for="nome" class="form-label">Nome:</label>
-                <input type="text" class="form-control" id="nome" name="nome">
-            </div>
-            <div class="col-6">
-                <label for="email" class="form-label">E-mail:</label>
-                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailObservacao"
-                    placeholder="Informe o seu email" required>
-                <div id="emailObservacao" class="form-text">Informe o seu melhor email</div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-6">
-                <label for="cpf" class="form-label">CPF:</label>
-                <input type="text" class="form-control" id="cpf" name="cpf">
-            </div>
-            <div class="col-6">
-                <label for="rg" class="form-label">RG:</label>
-                <input type="text" class="form-control" id="rg" name="rg">
+    <form>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <label for="nome" class="form-label">Nome:</label>
+                    <input type="text" class="form-control" id="nome" name="nome">
+                </div>
+                <div class="col-6">
+                    <label for="email" class="form-label">E-mail:</label>
+                    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailObservacao"
+                        placeholder="Informe o seu email" required>
+                    <div id="emailObservacao" class="form-text">Informe o seu melhor email</div>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-6">
-                <label for="senha" class="form-label">Senha:</label>
-                <input type="password" class="form-control" id="senha" name="senha" placeholder="Informe a sua senha"
-                    required>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <label for="cpf" class="form-label">CPF:</label>
+                    <input type="text" class="form-control" id="cpf" name="cpf">
+                </div>
+                <div class="col-6">
+                    <label for="rg" class="form-label">RG:</label>
+                    <input type="text" class="form-control" id="rg" name="rg">
+                </div>
             </div>
-            <div class="col-6">
-                <label for="Confsenha" class="form-label">Confirme a Senha:</label>
-                <input type="password" class="form-control" id="Confsenha" name="Confsenha" placeholder="Informe a sua senha"
-                    required>
+            <div class="row">
+                <div class="col-6">
+                    <label for="senha" class="form-label">Senha:</label>
+                    <input type="password" class="form-control" id="senha" name="senha"
+                        placeholder="Informe a sua senha" required>
+                </div>
+                <div class="col-6">
+                    <label for="Confsenha" class="form-label">Confirme a Senha:</label>
+                    <input type="password" class="form-control" id="Confsenha" name="Confsenha"
+                        placeholder="Informe a sua senha" required>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="mt-lg-5"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-5">
+            <div class="mt-lg-5"></div>
+            <div class="row">
+                <div class="col-6">
+                    <input type="file" class="form-control" id="arquivo" name="arquivo">
+                </div>
+                <div class="col-6">
+                    <input type="file" class="form-control" id="arquivo2" name="arquivo2" multiple>
+                </div>
             </div>
-            <div class="col-2">                
-                    <button type="submit">Enviar</button>               
+            <div class="mt-lg-5"></div>
+            <div class="row">
+                <div class="col-6">
+                    <input type="checkbox" class="form-check-input" id="termo" checked name="termo" value="Sim">
+                    <label for="termo" class="form-check-label">Aceitar termo de responsabilidade</label>
+                </div>
+                <div class="col-6">
+                    <input type="radio" class="form-check-input" name="sexo" id="sexo" value="masculino">
+                    <label for="sexo" class="form-check-label">Masculino</label>
+                    <input type="radio" class="form-check-input" name="sexo" id="sexo" checked value="feminino">
+                    <label for="sexo" class="form-check-label">Feminino</label>
+                </div>
             </div>
-            <div class="col-5">
+            <div class="mt-lg-5"></div>
+            <div class="row">
+                <div class="col-6">
+                    <select class="form-select" name="opcoes" id="opcoes">
+                        <option value="1">Brasília</option>
+                        <option value="2" selected>São Paulo</option>
+                        <option value="3">Rio de Janeiro</option>
+                    </select>
+                </div>
             </div>
-        </div>
-    </div>    
-    </form> 
+
+
+
+            <div class="mt-lg-5"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-9">
+                    </div>
+                    <div class="col-2">
+                        <button type="submit">Enviar</button>
+                    </div>
+                    <div class="col-1">
+                    </div>
+                </div>
+            </div>
+    </form>
+
 </body>
 </html>
