@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agro G2W</title>
     <link rel="stylesheet" href="style.css">
-    <style>/*Estilos CSS internos - para aplicar na tabela*/
+    <style>
+        /*Estilos CSS internos - para aplicar na tabela*/
         table {
             border-collapse: collapse;
             border: 3px solid rgb(100, 130, 40);
@@ -20,7 +21,7 @@
             letter-spacing: 1px;
         }
 
-        tfoot {            
+        tfoot {
             font-weight: bold;
             font-size: 75%;
         }
@@ -38,9 +39,15 @@
 </head>
 
 <body>
-    <header><!--Cabeçalho do conteúdo do site-->
-        <h1 id="titulo-principal">Agro G2W O Futuro é Verde</h1><!--Criando CSS-->
-        <nav><!--Área para o menu-->
+    <header>
+        <!--Cabeçalho do conteúdo do site-->
+        <h1 id="titulo-principal">Agro G2W O Futuro é Verde</h1>
+        <div>
+            <img src="imagens/Paisagem/paisagem-650.jpg" alt="Campo de soja">
+        </div>
+        <!--Criando CSS-->
+        <nav>
+            <!--Área para o menu-->
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Quem somos</a></li>
@@ -96,8 +103,10 @@
         </section>
         <section>
             <h2 class="titulo-secundario">Resultado do sorteio</h2>
-            <table><!--Trabalhando com tabela-->
-                <caption id="titulo-tabela"><strong> Sorteio do Dia dos Pais 2021</strong></caption><!--Usando tag semântica para criar título da tabela e no estilo negrito-->
+            <table>
+                <!--Trabalhando com tabela-->
+                <caption id="titulo-tabela"><strong> Sorteio do Dia dos Pais 2021</strong></caption>
+                <!--Usando tag semântica para criar título da tabela e no estilo negrito-->
                 <thead>
                     <tr>
                         <th>Ordem</th>
@@ -108,10 +117,12 @@
                 </thead>
                 <tfoot>
                     <tr>
-                        <td colspan="4">Autorização SUSEP n.º 125.45698.34/1</td>                        
+                        <td colspan="4">Autorização SUSEP n.º 125.45698.34/1</td>
                     </tr>
                     <tr>
-                        <td colspan="4">Para receber seu prêmio, entre en contato por e-mail: <e-mail>promocoes@g2w.com.br</e-mail></td>
+                        <td colspan="4">Para receber seu prêmio, entre en contato por e-mail: <e-mail>
+                                promocoes@g2w.com.br</e-mail>
+                        </td>
                     </tr>
                 </tfoot>
                 <tbody>
@@ -149,13 +160,63 @@
             </table>
         </section>
         <Section>
-            <h2 class="titulo-secundario">Entre em contato</h2><!--Formulário de Contato-->
-            Nome: <br>
-            Telefone: <br>
-            E-mail <br>           
-            Motivo do contato: <br>
-            Sugestão Elogio Reclamação Dúvidas <br>
-            Assunto: <br>
+            <h2 class="titulo-secundario">Entre em contato</h2>
+            <!--Formulário de Contato-->
+            <div class="container">
+                <form>
+                    <fieldset>
+                        <legend>Formulário de contato</legend>
+                        <div class="row">
+                            <label for="nome">Nome:</label>
+                            <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo" autocomplete="off" required>
+                        </div>
+                        <div cass="row">
+                            <div class="row">
+                                <label for="telefone">Telefone:</label>
+                                <input type="tel" name="telefone" id="telefone" placeholder="Insira seu telefone" required autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="row">
+                                <label for="email">E-mail:</label>
+                                <input type="email" name="email" id="email" placeholder="Digite seu e-mail">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label for="motivo">Motivo do contato:</label>
+                        </div>
+                        <div>
+                            <input type="radio" value="sugestao" name="motivo" id="sugestao">
+                            <label for="motivo">Sugestão</label>
+                            <input type="radio" value="elogio" name="motivo" id="elogio">
+                            <label for="motivo">Elogio</label>
+                            <input type="radio" value="reclamacao" name="motivo" id="reclamacao">
+                            <label for="motivo">Reclamação</label>
+                            <input type="radio" value="duvidas" name="motivo" id="duvidas">
+                            <label for="motivo">Dúvidas</label>
+                            
+                        </div>
+                        <div class="row">
+                            <label for="data">Data da ocorrência:</label>
+                            <input type="date" name="data" id="data">
+                        </div>
+                        <div class="row">
+                            <label for="assunto">Assunto:</label>
+                        </div>
+                        <div class="row">
+                            <textarea name="assunto" id="assunto" cols="100" rows="10"></textarea>
+                        </div>
+                        <div class="row">
+                            <input type="file">
+                        </div>
+                        <hr>
+                        <div class="buttons">
+                            <input type="submit" value="Enviar">
+                            <input type="reset" value="Apagar">
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
         </Section>
     </main>
 
