@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de login com bootstrap e css</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container col-11 col-md-10" id="form-container">
+        <div class="row-align-items-center">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Seja bem-vindo!</h2>
+                    <h3>Faça o login para nosso conteúdo!</h3>
+                    <form>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuário">
+                            <label for="usuario" class="form-label">Nome de Usuário</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
+                            <label for="senha" class="form-label">Senha</label>
+                        </div>
+                        <input type="submit" class="btn btn-primary" value="Entrar">
+                        <input type="reset" class=" btn btn-light" value="Limpar">
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <div class="col-12"> 
+                        <img src="bemVindo.svg" class="img-fluid">
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
+</body>
+</html>
