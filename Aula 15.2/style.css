@@ -1,0 +1,30 @@
+body{
+    background-color: yellowgreen;
+}
+#form-container{
+    background-color: lightgoldenrodyellow;
+    box-shadow: 5px 10px 15px;
+    margin: 25px;
+    padding: 10px;
+}#form-container h2{
+    font-size: 100px;
+    margin-bottom: 20px;
+}
+#form-container h3{
+    font-family: fantasy;
+    margin-bottom: 15px;
+}
+#form-container form{
+    padding-bottom: 200px;
+}
+#form-container .form-control{
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;    
+}
+#form-container .form-control:focus{
+    box-shadow: none;
+}
+#form-container .form-floating > .form-control:focus~label{
+    color: rgb(5, 87, 16);
+}
