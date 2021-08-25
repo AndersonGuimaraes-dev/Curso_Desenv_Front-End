@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap_icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/bootstrap.min.js" defer></script>
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header class="row" id="header">
+            <div id="container-logo">
+                <img src="imagens/icone.png" id="logo">
+                <h2>Futebol Online</h2>
+            </div>
+            <p>Campeonatos de Futebol</p>
+        </header>
+        <nav id="navbar" class="container">
+            <div class="row justify-content-center">
+                <a href="index.html">Home</a>
+                <a href="campeonatos.html">Campeonatos</a>
+                <a href="jogadores.html">Jogadores</a>
+                <a href="contato.html">Contato</a>
+            </div>
+        </nav>
+    </div>
+    <!-- Fim do cabeçalho -->
+    <div class="col-12">
+        <h3 id="campeonato">Formulário Contato</h3>
+    </div>
+    <div class="row" id="formulario">
+        <div class="container-fluid col-12 col-md-6">
+            <form class="row g-3">
+                <div class="col-md-6">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" name="nome" id="nome" class="form-control">
+                </div>
+                <div class="col-md-6">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" name="email" id="email" class="form-control">
+                </div>
+                <div class="col-md-4">
+                    <label for="telefone" class="form-label">Telefone</label>
+                    <input type="tel" name="telefone" id="telefone" class="form-control">
+                </div>
+                <div class="col-md-8">
+                    <label for="endereco" class="form-label">Endereço</label>
+                    <input type="text" name="endereco" id="endereco" class="form-control">
+                </div>
+                <div class="col-md-6">
+                    <label for="estado" class="form-label">Estado</label>
+                    <select class="form-select" id="estado" name="estado">
+                        <option>
+                        <option value="">Estados</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espirito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                        </option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="assunto" class="form-label">Assunto</label>
+                    <select class="" name="assunto" id="assunto">
+                        <option>Dúvidas</option>
+                        <option>Sugestões</option>
+                        <option>Sugestões</option>
+                        <option>Reclamações</option>
+                    </select>
+                </div>
+                <div class="col-md-12">
+                    <label for="comentario" class="form-label">Comentário</label>
+                    <textarea class="form-control" name="comentario" id="comentario" rows="5" placeholder="Comentários..."></textarea>
+                </div>
+                <div class="col-md-12">
+                    <button type="submit" class="btn">Enviar</button>
+                </div>
+            </form>
+        </div>
+        <div class="container-fluid col-12 col-sm-6">
+            <img src="imagens/imagem3.jpg"  class="img-fluid rounded">
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="container">
+        <p>Redes sociais</p>
+        <div class="row justify-content-center" id="rede-social">
+            <div class="col-1">
+                <a href="#"><i class="bi bi-facebook"></i></a>
+            </div>
+            <div class="col-1">
+                <a href="#"><i class="bi bi-instagram"></i></a>
+            </div>
+            <div class="col-1">
+                <a href="#"><i class="bi bi-twitter"></i></a>
+            </div>
+        </div>
+        <div>
+            <p>&copy Copyright 2021</p>
+        </div>
+    </footer>
+</body>
