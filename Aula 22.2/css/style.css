@@ -254,3 +254,28 @@ color:#40E04F;
     background-color: #40E04F;
     border-color: #40E04F;
 }
+/*Configurações de estido da seção Banner destaque*/
+#banner-destaque{
+    background-color: #101010;
+    padding: 6em;
+    margin-bottom: 4em;
+    text-align: center;
+}
+#banner-destaque .offer-subtitle,
+#banner-destaque h2{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#banner-destaque .btn{
+    margin: 2em;
+    font: bold;
+    padding: 1em;
+}
+#banner-destaque img{
+    max-width: 175px;
+}
+@media(min-width: 768px){
+    #banner-destaque h2{
+        font-size: 3em;
+    }
+}
