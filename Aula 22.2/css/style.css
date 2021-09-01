@@ -279,3 +279,28 @@ color:#40E04F;
         font-size: 3em;
     }
 }
+/*Estilos da seção Noviddes*/
+#novidades{
+    margin-bottom: 5em;    
+}
+#novidades-produtos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #101010;
+}
+#novidades-produtos h3{
+    text-transform: uppercase;
+    font-size: bold;
+    margin-bottom: 1em;
+    font-size: 2.5em;
+}
+#novidades .col-md-4{
+    padding: 0;    
+}
+#novidades .card img{
+    height: 170px;
+    width: 100px;
+    margin: 2em auto;
+}
