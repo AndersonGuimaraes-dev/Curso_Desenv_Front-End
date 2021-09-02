@@ -9,11 +9,14 @@
         body{
             font-family: Arial, Helvetica, sans-serif;
         }
+        /*
+        O símbolo > informa um parágrafo que está dentro da div (filho de uma div)
+        */
         div > p{
-            display: none;
+            display: none;/* Display nome informa que não será exibido*/
         }
         div:hover > p{
-            display: block;
+            display: block;/* o block mostrará o texto que foi anteiormente escondido quando o mouse passar em cima, por isso foi usado o hover*/
             color: white;
             background-color: red;
             width: 300px;
