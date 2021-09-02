@@ -5,13 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Links</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a{
+            color: red;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:visited{/* visited quando o link já foi visitado, por padrão, após o link ter sido visitado, ele fica com uma cor que o próprio navegador mostra, para dizer que aquele link já tinha sido visitado, aqui, nesse exemplo, usamos uma outra cor (vermelho-escuro) para informa que o link já foi visitado*/
+            color: darkred;
+        }
+        a:hover{/* hover quando o mouse passa em cima*/
+            color: black;
+        }
+        a:active{/* active quando o elemento foi clicado*/
+            color: yellow;
+        }
+        a::after{/*Depois do link (a), serve para adicionar informações depois*/
+            content: "Link";
+            text-decoration: none;
+            font-weight: normal;
+            color: darkgray;
+        }
+        /*Pseudo elementos mexem no conteúdo periférico do elemento, pode ser usado nos id, class, div, etc.*/
+        /*
+        Pseudo classes = :
+        Pseudo elementos = ::
+        */
+    </style>
 </head>
 <body>
     <h1>Personalizando links</h1>
     <ul>
-        <li>Repositório Github</li>
-        <li>Canal do Youtube</li>
-        <li>Site do Curso em vídeo</li>
+        <li><a href="https://github.com/AndersonGuimaraes-dev">Repositório Github</a></li>
+        <li><a href="https://www.youtube.com/watch?v=vMlrcOVr7po&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s&index=22">Canal do Youtube</a></li>
+        <li><a href="https://cursoemvideo.com">Site do Curso em vídeo</a></li>
     </ul>
 </body>
 </html>
