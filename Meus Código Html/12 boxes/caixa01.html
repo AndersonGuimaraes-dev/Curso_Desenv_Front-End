@@ -6,19 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modelo de ciaxas</title>
     <style>
-        h1{
+        h1{ /*Box-level*/
             background-color: lightgray;
             height: 300px;
             width: 300px;
+            /* Usar todas as propriedades em uma únca linha, por exemplo: border: 10px solid darkslategray*/
             border-width: 10px;
             border-style: solid;
             border-color: darkslategray;
+            /*Para padding podemos usar padding: 10px 10px 10px 10px (se as 4 forem iguais, basta informar uma única vez - padding: 10px)
+            no caso de padding, também podemos usar dois valores, padding: 10px 20px (isso significa que top e bottom fica com 10px e rigth e left em 20px)*/
             padding-top: 10px;
             padding-right: 10px;
             padding-bottom: 10px;
             padding-left: 10px;
+            /* Margin também pode ser escrito numa única linha margin:20px 40px (se quiser centralizar as margin, podemos usar auto, por exemplo margin: 20px auto 40px auto*/
+            margin-top: 20px;
+            margin-right: 20px;
+            margin-bottom: 40px;
+            margin-left: 20px;
+            /*Outline em shorthanding - outline: 5px dashed salmon*/
+            outline-width: 5px;
+            outline-style: dashed;
+            outline-color: salmon;
         }
-        a{
+        a{ /*Inline-level*/
             border-width: 10px;
             border-style: solid;
             border-color: red;            
