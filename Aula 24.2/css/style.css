@@ -79,6 +79,7 @@ body{
 }
 
 
+
 @media(min-width: 768px){
     #search-form{
         min-width: 40%;
@@ -242,148 +243,234 @@ color:#40E04F;
 .card .card-category{
     font-size: 0.8em;
 }
+
 .card .card-text{
     margin: 2em 0;
     font-weight: bold;
 }
-.btn{
+
+.btn {
     background-color: transparent;
     border-color: #40E04F;
 }
+
 .btn:hover{
-    background-color: #40E04F;
+    background-color: #40E04F; 
     border-color: #40E04F;
 }
-/*Configurações de estido da seção Banner destaque*/
+
 #banner-destaque{
     background-color: #101010;
     padding: 6em;
     margin-bottom: 4em;
     text-align: center;
-}
-#banner-destaque .offer-subtitle,
-#banner-destaque h2{
-    text-transform: uppercase;
-    font-weight: bold;
-}
-#banner-destaque .btn{
-    margin: 2em;
-    font: bold;
-    padding: 1em;
-}
-#banner-destaque img{
-    max-width: 175px;
-}
-@media(min-width: 768px){
-    #banner-destaque h2{
-        font-size: 3em;
     }
-}
-/*Estilos da seção Noviddes*/
-#novidades{
-    margin-bottom: 5em;    
-}
-#novidades-produtos{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #101010;
-}
-#novidades-produtos h3{
-    text-transform: uppercase;
-    font-size: bold;
-    margin-bottom: 1em;
-    font-size: 2.5em;
-}
-#novidades .col-md-4{
-    padding: 0;    
-}
-#novidades .card img{
-    height: 170px;
-    width: 100px;
-    margin: 2em auto;
-}
-/* Formatação da galeria*/
-#galeria .image-container{
-    background-size: cover;
-    background-position: center;
-    height: 225px;
-    border: 3px solid #101010;
-    cursor: pointer;
-    transition: 5s;
-}
-#galeria .image-container:hover{
-    border-color: #40E04F;
-}
-#imagem1{
-    background-image: url(..//imagem/insta1.jpg);
-}
-#imagem2{
-    background-image: url(..//imagem/insta2.jpg);
-}
-#imagem3{
-    background-image: url(..//imagem/insta3.jpg);    
-}
-#imagem4{
-    background-image: url(..//imagem/insta4.jpg);
-}
-#imagem5{
-    background-image: url(..//imagem/insta5.jpg);
-}
-#imagem6{
-    background-image: url(../imagem/insta6.jpg);
-}
-/* Rodapé */
-#footer-links-container{
-    border-bottom: 1px solid #262526;
-}
-#footer .footer-column{/* Formatação para mobile*/
-    padding: 2em;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-@media(min-width: 768px){/* Para computadores*/
+
+    #banner-destaque .offer-subtitle,
+    #banner-destaque h2 {
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    #banner-destaque .btn{
+        margin: 2em;
+        font-weight: bold;
+        padding: 1em;
+    }
+
+    #banner-destaque img{
+        max-width: 170px;
+    }
+
+    @media(min-width: 768px){
+        #banner-destaque h2{
+            font-size: 3em;
+        }
+    }
+
+    #novidades{
+        margin-bottom: 5em;
+    }
+
+    #novidades-produtos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color:#101010;
+    }
+
+    #novidades-produtos h3{
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 1em;
+        font-size: 2.5em;
+    }
+
+    #novidades .col-md-4{
+        padding: 0;
+    }
+
+    #novidades .card img{
+        height: 170px;
+        width: 100px;
+        margin: 2em auto;
+    }
+
+    #galeria .image-container{
+        background-size: cover;
+        background-position: center;
+        height: 225px;
+        border: 3px solid #101010;
+        cursor: pointer;
+        transition: .5s;
+
+    }
+
+    #galeria .image-container:hover{
+        border-color: #40E04F;    
+
+    }
+
+    #imagem1 {
+        background-image: url(../imagem/insta1.jpg);
+    }
+    #imagem2 {
+        background-image: url(../imagem/insta2.jpg);
+    }
+    #imagem3 {
+        background-image: url(../imagem/insta3.jpg);
+    }
+    #imagem4 {
+        background-image: url(../imagem/insta4.jpg);
+    }
+    #imagem5 {
+        background-image: url(../imagem/insta5.jpg);
+    }
+    #imagem6 {
+        background-image: url(../imagem/insta6.jpg);
+    }
+
+    #footer-links-container{
+        border-bottom: 1px solid #262526;
+    }
+
     #footer .footer-column{
-        padding: 5em 2em;
+        padding: 2em;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
+
+    @media(min-width: 768px){
+        #footer .footer-column{
+            padding: 5em 2em;
+        }
+    }
+
+  #footer-links-container h3{
+      margin-bottom: 25px;
+      text-transform: uppercase;
+  }
+
+  #footer-links-container li{
+      font-size: 1em;
+      text-align: center;
+      list-style: none;
+  }
+
+  @media(min-width: 768px){
+      #footer .footer-column{
+          padding: 5em 2em;
+      }
+    }
+
+    #footer-links-container a{
+        text-decoration: none;
+    }
+
+    #footer-links-container a:hover{
+        color: #fff;
+    }
+
+    #footer-center{
+        border-left: 1px solid #40E04F;
+        border-right: 1px solid #40E04F;
+    }
+
+    #footer-center h3{
+        font-weight: 1000;
+    }
+
+    #footer-center .bi-telephone {
+        color: #40E04F;
+        font-weight: bold;
+        font-size: 2em;
+        margin-top: -15px;
+    }
+
+    #tel{
+        font-weight: bold;
+        font-size: 1em; 
+    }
+
+    #newsletter-container{
+        text-align: center;
+        padding: 20px;
+        border-bottom: 1px solid #40E04F;
+        border-top: 1px solid #40E04F;
+    }
+
+    #formulario{
+        max-width: 500px;
+        margin: 15px auto;
+    }
+
+ #formulario i {
+ font-size: 2em;
+
 }
-#footer-links-container h3{
-    margin-bottom: 25px;
-    text-transform: uppercase;
+#formulario .btn{
+    color: #fff;   
 }
-#footer-links-container li{
-    font-size: 1em;
+
+#social-container{
+    margin: 20px auto;
+}
+
+#newsletter-footer{
     text-align: center;
-    list-style: none;    
+    padding: 20px;
+    border-bottom: 1px solid;
+    border-top: 1px solid;
 }
-@media(min-width: 768px){
-    #footer .footer-column{
-        padding: 5em 2em;
-    }
+
+#formulario{
+    max-width: 600px;
+    margin: 12pt auto;
+    border: 1px solid #40E04F;
 }
-#footer-links-container a{
-    text-decoration: none;
+
+#formulario input{
+    margin: 5px;
+    background-color: transparent;
+    border: none;
 }
-#footer-links-container a:hover{
-  color: #fff;
-}
-#footer-center{
-    border-left: 1px solid #40E04F;
-    border-right: 1px solid #40E04F;
-}
-#footer-center h3{
-    font-weight: 1200;    
-}
-#footer-center .bi-telephone{
-    color: #40E04F;
-    font-weight: bold;
+
+#formulario i {
     font-size: 2em;
-    margin-top: 15px;
+    margin-right: 5px;
 }
-#tel{
-    font-weight: bold;
-    font-size: 1em;
+
+#formulario .btn{
+    margin-left: 15px;
+    color: white;
+}
+#formulario input:focus{
+    box-shadow: none;
+}
+
+#formulario input::placeholder{
+    color: #fff;
 }
