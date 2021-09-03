@@ -23,6 +23,9 @@ body{
 }
 .secondary-color{
     color:#262526;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
 }
 
 #navbar .navbar-nav{
