@@ -14,4 +14,4 @@
     console.log("teste 4");
 }
 console.log(2);
-/* No JS não há necessidade de declarar qual o tipo de variável: caracter, string, numero, booleano etc. */
+/* No JS não há necessidade de declarar qual o tipo de variável: caracter, string, número, booleano etc. */
