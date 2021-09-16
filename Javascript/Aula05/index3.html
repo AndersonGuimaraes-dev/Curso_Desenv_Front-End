@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/bootstrap.min.js" defer></script>
+    <title>Exercício</title>
+</head>
+<body>
+    <input type="text" id="numero1" name="numero1" class="form-control"> 
+    <input type="text" id="numero2" name="numero2" class="form-control">
+    <br>
+    <button class="btn btn-primary" onclick="soma()">Enviar</button><!-- o envento on click significa que ao ser clicado -->
+    
+    
+    <script>
+        
+        function soma(){
+          
+            var num1 = parseInt(document.querySelector('#numero1').value);//parseInt convert para valores numéricos, senão ficaria como string (texto)
+            var num2 = parseInt(document.querySelector('#numero2').value);
+
+            var resultado = num1 + num2
+           
+            alert(resultado)// antes do parseInt, se fosse colocado um typeof aqui, iria mostrar string, agora mostra number
+        }
+        
+
+    </script>
+    
+</body>
+</html>
