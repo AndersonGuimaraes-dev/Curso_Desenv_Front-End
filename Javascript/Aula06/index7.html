@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/bootstrap.min.js" defer></script>
+    <title>Exercício</title>
+</head>
+<body>
+    <!-- document.getElementsByName -->
+        <div class="container">
+        <div class="row">
+            <div class="col-4">                              
+                <input type="text" id="nome" name="nome" class="form-control" onblur="capturaDados()">
+                <input type="text" name="nome" class="form-control" onblur="capturaDados()">
+            </div>            
+        </div>    
+        <div class="col-4" id="resultado">                       
+        </div>    
+    </div>  
+    <script>
+        document.getElementById('nome').focus(); 
+
+        function capturaDados(){
+            var nome = document.getElementsByName('nome')[0].value // [0] - primeiro name, se houver mais de 1, sempre lembrar que computador sempre começa a contar do 0 (zero)
+            // var nome = document.getElementsByName('nome')[1].value - aqui ele pegaria o do segundo campo, (2,3,4,5... etc.)
+            //Obs.: observar que aqui é Elements com "s", no plural, já que "name" pode ser repetido
+            document.getElementById('resultado').innerHTML = nome
+
+            if(nome){
+                document.getElementById('resultado').innerHTML = nome
+            }else{
+                document.getElementById('resultado').innerHTML = "Campo vazio"
+            }
+            /*
+
+            Implementar duas variáveis para ter como resultado:
+            var nome = document.getElementsByName('nome')[0].value - primeira variável "nome"
+            var nome2 = document.getElementsByName('nome')[0].value - segunda variável "nome2"
+            document.getElementById('resultado').innerHTML = nome+" - "+nome2
+            
+            */
+
+
+        }
+
+    </script>
+    
+</body>
+</html>
