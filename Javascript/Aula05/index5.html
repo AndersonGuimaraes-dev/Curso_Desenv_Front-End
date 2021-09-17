@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/bootstrap.min.js" defer></script>
+    <title>Exercício</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">                              
+                <input type="text" id="nome" name="nome" class="form-control">                
+            </div>
+            <div class="col-4">
+                <button class="btn btn-primary" onclick="capturaDados()">Enviar</button> <!-- O elemneto onclick do JS, ne caso, se relaciona com a function -->
+            </div>
+        </div>    
+        <div class="col-4" id="resultado">                       
+        </div>    
+    </div>  
+    <script>
+        
+        function capturaDados(){
+            var nome = document.querySelector('#nome').value;
+            document.querySelector('#resultado').innerHTML = nome //inner HTM para colocar dentro de uma  div
+
+            // nova forma de fazer
+            /*
+            var nome = document.getElementById('nomedoId').value; - o get by id jpa diz que será usado um id, por isso não precisa do # = nome do id nesse casonome
+            document.getElementById('nomedoid').innerHTML = nome; - também será um id
+            */
+
+            //Observação: verificar a difernça entre o getElementById e o querySelector
+        }
+
+    </script>
+    
+</body>
+</html>
