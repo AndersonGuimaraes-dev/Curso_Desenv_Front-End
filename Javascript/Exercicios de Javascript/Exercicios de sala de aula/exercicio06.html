@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo IMC</title>
+</head>
+<body>
+    <!-- JS integrado com HTML -->
+    <!-- Cálculo imc = peso / (alt x alt) -->
+    <h1>Cálculo IMC</h1>
+    <p>Calcule o seu Índice de Massa Corporal, para isso, informe seu peso e, em seguida, informe a sua altura</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <input type="text" id="peso" name="peso" class="form-control" placeholder="Informe seu peso">                
+            </div>
+            <br>
+            <div class="col-4">
+                <input type="text" id="alt" name="altura" class="form-control" placeholder="Informe sua altura">
+            </div>
+            <br>
+            <div class="col-4">
+                <button class="btn btn-primary" onclick="calcImc()">Calcular</button>
+            </div>            
+        </div>
+    </div>
+    <script>
+        function calcImc(){
+        var peso = document.getElementsByName('peso')[0].value;//sempre informar a ordem do name com []
+        var altura = document.getElementById('alt').value;
+        
+        var resultado = Number(peso) / Math.pow(Number(altura),2)
+        
+        alert("Seu IMC é: "+resultado);
+        }
+    </script>
+    
+</body>
+</html>
