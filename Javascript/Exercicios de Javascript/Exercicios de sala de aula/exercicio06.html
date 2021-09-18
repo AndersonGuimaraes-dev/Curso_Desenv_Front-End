@@ -30,10 +30,21 @@
         function calcImc(){
         var peso = document.getElementsByName('peso')[0].value;//sempre informar a ordem do name com []
         var altura = document.getElementById('alt').value;
+        /*
+        para não usar o number, basta informar como float:
+        var peso = parseFloat(document.getElementsByName('peso')[0].value);
+        var altura = parseFloat(document.getElementById('alt').value);
+
+        math.pow - insere uma função exponencial
+        se já usado o parseFloat:
+        a variável resultado poderia ser:
+        var resultado = peso / (alt**2) - ex: 3**2 = 3x3; 2**3= 2x2x2
+
+        */
         
-        var resultado = Number(peso) / Math.pow(Number(altura),2)
+        var resultado = Number(peso) / Math.pow(Number(altura),2) // numer indica que a variável é um número math.pow(number(variavel),expoente) calculo exponencial
         
-        alert("Seu IMC é: "+resultado);
+        alert("Seu IMC é: "+parseFloat(resultado.toFixed(2)));
         }
     </script>
     
