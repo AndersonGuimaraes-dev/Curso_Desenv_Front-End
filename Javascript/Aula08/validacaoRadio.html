@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação Formulário Radio</title>
+</head>
+<body>
+    <form name="fomurlario" action="#" onsubmit=" return validacaoRadio()" method="POST">
+        <div>Informe o sexo</div>
+        <div>
+            <label>Maculino</label>
+            <input type="radio" id="sexo1" name="sexo" value="1">
+            <label>Feminino</label>
+            <input type="radio" name="sexo" id="sexo2" value="2">
+        </div>
+        <div id="sexo_erro"></div>
+        <input type="submit" value="Enviar">        
+    </form>
+
+    <script>
+        function validacaoRadio(){
+            var recebeSexo = document.getElementsByName("sexo");
+            var formValida = false;
+            sexoErr = document.getElementById('sexo_erro')
+            for(i=0; i< recebeSexo.length; i++){
+                if(recebeSexo[i].checked) formValida = true;
+            }
+            if(!formValida){
+                sexoErr.innerHTML = "Assinale uma das opções!"
+                return formValida
+            }            
+        }
+    </script>
+    
+</body>
+</html>
