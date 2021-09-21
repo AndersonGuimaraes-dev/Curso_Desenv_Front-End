@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação de Formulários com JS</title>
+</head>
+<body>
+    <!-- Crie um formulário com pelo menos um campo do tipo input, radio, checkbox e select. Aplique uma validação em javascript para cada um dos campos. -->
+    <h1>Insira seus dados para acessar nosso conteúdo</h1>        
+    <form method="post" id="formulario">
+        <div>
+            <input type="text" id="nome" placeholder="Informe o seu primeiro nome">
+            <div id="nome_erro"></div>
+        </div>
+        <div>
+            <input type="text" id="sobrenome" placeholder="Informe o seu segundo nome">
+            <div id="sobrenome_erro"></div>
+        </div>
+        <p>Ao informar meus dados estou apto a acessar o <mark><strong>CONTEÚDO EXCLUSIVO</strong></mark></p>    
+    <form action="#" onsubmit="return validaCheckBox(this)">
+        <div>
+            <label for="confirma">Ciente dos termos</label>
+            <input type="checkbox" name="confirma" value="1">
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Enviar">
+        </div>
+    </form>
+    <br>    
+    <form action="#" onsubmit="validaSelect(this)">
+        <select name="marca">
+            <option value="">Selecione o seu Time do Coração</option>
+            <option value="1">Flamengo</option>
+            <option value="2">Vasco</option>
+            <option value="3">Palmeiras</option>
+            <option value="4">São Paulo</option>            
+        </select>
+        <select name="modelo">
+            <option value="">Selecione o Campeonato</option>
+            <option value="1">Brasileirão</option>
+            <option value="2">Copa do Brasil</option>            
+        </select>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script>
+        var nome = document.getElementById("nome");
+        var nomeValidation = function(){
+            nomeValue = nome.value.trim();
+            validnome = /^([a-zA-ZÀ-ú']{2,40}(\s+|$))$/;
+            nomeErr = document.getElementById('nome_erro');
+            if(nomeValue == ""){
+                nomeErr.innerHTML = "Informe o primeiro nome";
+            }else if(!validnome.test(nomeValue)){
+                nomeErr.innerHTML = "O nome deve conter apenas letras e não deve conter espaço em branco";
+                }else{
+                    nomeErr.innerHTML = "";
+                    return true;
+                }       
+            }
+            nome.oninput = function(){
+            nomeValidation();
+        }
+
+var sobrenome = document.getElementById("sobrenome");
+var sobrenomeValidation = function(){
+
+    sobrenomeValue = sobrenome.value.trim();
+    validsobrenome = /^([a-zA-ZÀ-ú']{2,40}(\s+|$))$/;
+    sobrenomeErr = document.getElementById('sobrenome_erro');
+
+    if(sobrenomeValue == ""){
+        sobrenomeErr.innerHTML = "Informe o segundo nome"
+    }else if(!validsobrenome.test(sobrenomeValue)){
+        sobrenomeErr.innerHTML = "O sobrenome deve conter apenas letras e não deve conter espaço em branco"
+    }else{
+        sobrenomeErr.innerHTML = ""
+        return true;
+    }
+}
+
+sobrenome.oninput = function(){
+    sobrenomeValidation();
+}
+        function validaCheckBox(formulario){
+            if(formulario.confirma.checked == false){
+                alert('Esse campo é obrigatório');
+                return false;               
+            } else {
+                return true
+            }
+        }
+        function validaSelect(formulario){
+            if(formulario.marca.value == ""){
+                alert('Selecione um Time');
+                formulario.marca.focus();
+                return false;
+            }
+            if(formulario.modelo.value = ""){
+                alert('Selecione um Campeonato');
+                formulario.modelo.focus();
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
