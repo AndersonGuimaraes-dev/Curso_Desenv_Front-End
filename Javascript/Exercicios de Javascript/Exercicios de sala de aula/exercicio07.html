@@ -18,6 +18,10 @@
             <input type="text" id="sobrenome" placeholder="Informe o seu segundo nome">
             <div id="sobrenome_erro"></div>
         </div>
+        <br>
+        <div>
+            <input type="submit" value="Enviar">
+        </div>
         <p>Ao informar meus dados estou apto a acessar o <mark><strong>CONTEÚDO EXCLUSIVO</strong></mark></p>    
     <form action="#" onsubmit="return validaCheckBox(this)">
         <div>
@@ -59,32 +63,31 @@
                 }else{
                     nomeErr.innerHTML = "";
                     return true;
-                }       
+                    }       
             }
             nome.oninput = function(){
             nomeValidation();
         }
 
-var sobrenome = document.getElementById("sobrenome");
-var sobrenomeValidation = function(){
+        var sobrenome = document.getElementById("sobrenome");
+        var sobrenomeValidation = function(){
 
-    sobrenomeValue = sobrenome.value.trim();
-    validsobrenome = /^([a-zA-ZÀ-ú']{2,40}(\s+|$))$/;
-    sobrenomeErr = document.getElementById('sobrenome_erro');
+            sobrenomeValue = sobrenome.value.trim();
+            validsobrenome = /^([a-zA-ZÀ-ú']{2,40}(\s+|$))$/;
+            sobrenomeErr = document.getElementById('sobrenome_erro');
+            if(sobrenomeValue == ""){
+            sobrenomeErr.innerHTML = "Informe o segundo nome"
+            }else if(!validsobrenome.test(sobrenomeValue)){
+                sobrenomeErr.innerHTML = "O sobrenome deve conter apenas letras e não deve conter espaço em branco"
+            }else{
+                sobrenomeErr.innerHTML = ""
+                return true;
+            }
+        }
 
-    if(sobrenomeValue == ""){
-        sobrenomeErr.innerHTML = "Informe o segundo nome"
-    }else if(!validsobrenome.test(sobrenomeValue)){
-        sobrenomeErr.innerHTML = "O sobrenome deve conter apenas letras e não deve conter espaço em branco"
-    }else{
-        sobrenomeErr.innerHTML = ""
-        return true;
+        sobrenome.oninput = function(){
+        sobrenomeValidation();
     }
-}
-
-sobrenome.oninput = function(){
-    sobrenomeValidation();
-}
         function validaCheckBox(formulario){
             if(formulario.confirma.checked == false){
                 alert('Esse campo é obrigatório');
