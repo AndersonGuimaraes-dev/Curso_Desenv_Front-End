@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação de Formulário</title>
+</head>
+<body>
+    
+<form method="post" id="formulario">
+<div>
+    <input type="text" id="nome" placeholder="Informe o seu primeiro nome">
+    <div id="nome_erro"></div>
+</div>
+<div>
+    <input type="text" id="sobrenome" placeholder="Informe o seu segundo nome">
+    <div id="sobrenome_erro"></div>
+</div>
+<div>
+    <input type="email" id="email" placeholder="Informe o email">
+    <div id="email_erro"></div>
+</div>
+<div>
+    <input type="number" id="celular" placeholder="Informe o celular">
+    <div id="celular_erro"></div>
+</div>
+<div>
+    <input type="password" id="senha" placeholder="Informe a senha">
+    <div id="senha_erro"></div>
+</div>
+<div>
+    <input type="password" id="confirmsenha" placeholder="Confirmação de senha">
+    <div id="confirmsenha_erro"></div>
+</div>
+<input type="submit">
+</form>
+
+
+<script type="text/javascript">
+var nome = document.getElementById("nome");
+var nomeValidation = function(){
+
+    nomeValue = nome.value.trim();
+    validnome = /^([a-zA-ZÀ-ú']{2,40}(\s+|$))$/;
+    nomeErr = document.getElementById('nome_erro');
+
+    if(nomeValue == ""){
+        nomeErr.innerHTML = "Informe o primeiro nome";
+    }else if(!validnome.test(nomeValue)){
+        nomeErr.innerHTML = "O nome deve conter apenas letras e não deve conter espaço em branco";
+    }else{
+        nomeErr.innerHTML = "";
+        return true;
+    }
+}
+
+nome.oninput = function(){
+    nomeValidation();
+}
+
+var sobrenome = document.getElementById("sobrenome");
+var sobrenomeValidation = function(){
+
+    sobrenomeValue = sobrenome.value.trim();
+    validsobrenome = /^([a-zA-ZÀ-ú']{2,40}(\s+|$))$/;
+    sobrenomeErr = document.getElementById('sobrenome_erro');
+
+    if(sobrenomeValue == ""){
+        sobrenomeErr.innerHTML = "Informe o segundo nome"
+    }else if(!validsobrenome.test(sobrenomeValue)){
+        sobrenomeErr.innerHTML = "O sobrenome deve conter apenas letras e não deve conter espaço em branco"
+    }else{
+        sobrenomeErr.innerHTML = ""
+        return true;
+    }
+}
+
+sobrenome.oninput = function(){
+    sobrenomeValidation();
+}
+
+var email = document.getElementById("email");
+var emailValidation = function(){
+    emailValue = email.value.trim();
+    validemail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; 
+    emailErr = document.getElementById('email_erro');
+
+
+    if(emailValue == ""){
+        emailErr.innerHTML = "Informe o email"
+    }else if(!validemail.test(emailValue)){
+        emailErr.innerHTML = "O endereço de email deve estar em formato válido!"
+    }else{
+        emailErr.innerHTML = ""
+        return true;
+    }
+}
+
+email.oninput = function(){
+    emailValidation();
+}
+
+var celular = document.getElementById("celular");
+var celularValidation = function(){
+    celularValue = celular.value.trim();
+    validcelular = /^[0-9]*$/;
+    celularErr = document.getElementById('celular_erro');
+
+    if(celularValue == ""){
+        celularErr.innerHTML = "Informe o celular"
+    }else if(!validcelular.test(celularValue)){
+        celularErr.innerHTML = "O número do celular deve conter apenas números"
+    }else if(celularValue.length != 11){
+        celularErr.innerHTML = "O número do celular deve conter 11 dígitos"
+    }
+    else{
+        celularErr.innerHTML = ""
+        return true
+    } 
+}
+
+celular.oninput = function(){
+    celularValidation();
+}
+
+var senha = document.getElementById("senha");
+var senhaValidation = function(){
+    senhaValue = senha.value.trim();
+    validsenha = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
+    senhaErr = document.getElementById('senha_erro');
+
+    if(senhaValue == ""){
+        senhaErr.innerHTML = "Informe a senha"
+    }else if(!validsenha.test(senhaValue)){
+        senhaErr.innerHTML = "A senha deve conter um caracter em maiusculo, minusculo, pelo menos um número, um caracter especial e no mínimo 8 caracteres"        
+    }else{
+        senhaErr.innerHTML = ""
+        return true
+    }
+}
+
+senha.oninput = function(){
+    senhaValidation();
+    confirmsenhaValidation();
+}
+
+var confirmsenha = document.getElementById("confirmsenha");
+var confirmsenhaValidation = function(){
+    confirmsenhaValue = confirmsenha.value.trim();
+    confirmsenhaErr = document.getElementById('confirmsenha_erro');
+
+    if(confirmsenhaValue == ""){
+        confirmsenhaErr.innerHTML = "Confirme a senha"
+    }else if(confirmsenhaValue != senha.value){
+        confirmsenhaErr.innerHTML = "A senha informada não confere"
+    }else{
+        confirmsenhaErr.innerHTML = "";
+        return true 
+    }
+}
+
+confirmsenha.oninput = function(){
+    confirmsenhaValidation();
+}
+
+document.getElementById("formulario").onsubmit=function(e){
+
+    nomeValidation();
+    sobrenomeValidation();
+    emailValidation();
+    celularValidation();
+    senhaValidation();
+    confirmsenhaValidation();
+
+    if(nomeValidation() == true &&
+       sobrenomeValidation() == true &&
+       emailValidation() == true &&
+       celularValidation() == true &&
+       senhaValidation() == true && 
+       confirmsenhaValidation() == true
+       ){
+
+        return true
+    }else{
+        return false;
+    }
+
+
+}
+
+</script>
+
+</body>
+</html>
