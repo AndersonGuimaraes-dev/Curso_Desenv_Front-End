@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação Campo Select</title>
+</head>
+<body>
+    <form action="#" onsubmit="validaSelect(this)">
+        <select name="marca">
+            <option value="">Selecione a Marca</option>
+            <option value="1">VW</option>
+            <option value="2">FIAT</option>
+            <option value="3">HONDA</option>
+            <option value="4">TOYOTA</option>            
+        </select>
+        <select name="modelo">
+            <option value="">Selecione o Modelo</option>
+            <option value="1">Palio</option>
+            <option value="2">Uno</option>
+            <option value="3">Corolla</option>
+            <option value="4">Civic</option>
+        </select>
+        <input type="submit" value="Enviar">
+
+    </form>
+    <script>
+        function validaSelect(formulario){
+            if(formulario.marca.value == ""){
+                alert('Selecione uma marca');
+                formulario.marca.focus();
+                return false;
+            }
+            if(formulario.modelo.value = ""){
+                alert('Selecione um modelo');
+                formulario.modelo.focus();
+                return false;
+            }
+        }
+    </script>
+    
+</body>
+</html>
