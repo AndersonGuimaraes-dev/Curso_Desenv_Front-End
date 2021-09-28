@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+        <title>Tabela utilizando Javascript</title>       
+</head>
+<body>   
+            
+                <div id="cadastro">
+                    <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                        <div>
+                            <label id="nomeValidationError">Nome</label>
+                            <input type="text" name="nome" id="nome">
+                        </div>
+                        <div>
+                            <label>Sobrenome</label>
+                            <input type="text" name="sobrenome" id="sobrenome">
+                        </div>
+                        <div>
+                            <label>Email</label>
+                            <input type="text" name="email" id="email">
+                        </div>
+                        <div>
+                            <label>Telefone</label>
+                            <input type="text" name="telefone" id="telefone">
+                        </div>
+                        <div>
+                            <label>Endereço</label>
+                            <input type="text" name="endereco" id="endereco">
+                        </div>
+                        <div  class="form-action-buttons">
+                            <input type="submit" value="Enviar">
+                        </div>
+                    </form>
+            </div>
+            <br/>
+            <div class = "tabelaCadastro">
+                    <table id="tbPessoas">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Sobrenome</th>
+                                <th>Email</th>
+                                <th>Telefone</th>
+                                <th>Endereço</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+    
+                        </tbody>
+                    </table>
+            </div>       
+   
+
+    <script>
+        var selectedRow = null
+
+function onFormSubmit() {
+    if (validate()) {
+        var formData = readFormulario();
+        if (selectedRow == null)
+            insertNewRecord(formData);
+        else
+            updateRecord(formData);
+        resetForm();
+    }
+}
+
+function readFormulario() {
+    var formData = {};
+    formData["nome"] = document.getElementById("nome").value;
+    formData["sobrenome"] = document.getElementById("sobrenome").value;
+    formData["email"] = document.getElementById("email").value;
+    formData["telefone"] = document.getElementById("telefone").value;
+    formData["endereco"] = document.getElementById("endereco").value;
+    return formData;
+}
+
+function insertNewRecord(data) {
+    var table = document.getElementById("tbPessoas").getElementsByTagName('tbody')[0];
+    var newRow = table.insertRow(table.length);
+    cell1 = newRow.insertCell(0);
+    cell1.innerHTML = data.nome;
+    cell2 = newRow.insertCell(1);
+    cell2.innerHTML = data.sobrenome;
+    cell3 = newRow.insertCell(2);
+    cell3.innerHTML = data.email;
+    cell4 = newRow.insertCell(3);
+    cell4.innerHTML = data.telefone;
+    cell5 = newRow.insertCell(4);
+    cell5.innerHTML = data.endereco;
+    cell5 = newRow.insertCell(5);
+    cell5.innerHTML = `<a onClick="onEdit(this)">Editar</a>
+                       <a onClick="onDelete(this)">Excluir</a>`;
+}
+
+function resetForm() {
+    document.getElementById("nome").value = "";
+    document.getElementById("sobrenome").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("telefone").value = "";
+    document.getElementById("endereco").value = "";
+    selectedRow = null;
+}
+
+function onEdit(td) {
+    selectedRow = td.parentElement.parentElement;
+    document.getElementById("nome").value = selectedRow.cells[0].innerHTML;
+    document.getElementById("sobrenome").value = selectedRow.cells[1].innerHTML;
+    document.getElementById("email").value = selectedRow.cells[2].innerHTML;
+    document.getElementById("telefone").value = selectedRow.cells[3].innerHTML;
+    document.getElementById("endereco").value = selectedRow.cells[4].innerHTML;
+}
+function updateRecord(formData) {
+    selectedRow.cells[0].innerHTML = formData.nome;
+    selectedRow.cells[1].innerHTML = formData.sobrenome;
+    selectedRow.cells[2].innerHTML = formData.email;
+    selectedRow.cells[3].innerHTML = formData.telefone;
+    selectedRow.cells[4].innerHTML = formData.endereco;
+}
+
+function onDelete(td) {
+    if (confirm('Você tem certeza que deseja excluir esse registro?')) {
+        row = td.parentElement.parentElement;
+        document.getElementById("tbPessoas").deleteRow(row.rowIndex);
+        resetForm();
+    }
+}
+function validate() {
+    isValid = true;
+    if (document.getElementById("nome").value == "") {
+        isValid = false;        
+    } else {
+        isValid = true;
+        if (!document.getElementById("nomeValidationError").classList.contains("hide"))
+            document.getElementById("nomeValidationError").classList.add("hide");
+    }
+    return isValid;
+}
+    </script>
+</body>
+</html>
